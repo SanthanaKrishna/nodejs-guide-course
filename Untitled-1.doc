@@ -1,0 +1,116 @@
+  restart: true
+  runtimeExecutable: "nodemon
+  console: "integratedTerminal
+
+  node js Role:
+  
+  Run Server:
+  Create Server and Listen to Incoming Requests
+  node js take incoming request and routes them in our code
+
+  Business Logic:
+  Handle Request, Validation Input, Connect to Database
+
+  REPL:
+  Read: Read User Input
+  Eval: Evaluate User Input
+  Print: PrintOutput(Result)
+  Loop: Wait for new Input
+
+  WebWorks:
+
+HTTP,HTTPS:
+Hype Text Transfer Protocal
+A Protocol for Transferring Data which is understood by Browser and Server 
+HTTPS: 
+Hype Text Transfer Protocal Secure
+HTTP + Data Encryption (during Transmission)
+
+Core Modules:
+http, https, fs, path, os
+
+http: Launch a server ,  to send request 
+https: launch a SSL server
+
+Node js LifeCycle: 
+
+node appjs -> start script -> parse code, register,variabes,functions
+->event loop ( keeps on running as long as there are event listeners registered)
+
+::node js uses an EVENT DRIVEN approach for all kinds of stuff
+  node js execute single threaded javascript
+  
+
+  Streams & Buffers:
+  buffers is simply a construct which allow you to hold multiple chunks and work with them before they are released once you done
+
+Single Thread, Event Loop and Blocking code:
+node js uses only one single javascript thread and
+Thread: is basically like a process in your operating system
+Event loop: is automatically started by node js when your starts 
+          its Handle Event Callbacks
+          its handle all Callbacks and its has certain order
+          1)Timer Phase:at beginning of each new iteration its check if there abny timer callback(setTimout,setInterval callbacks)
+          2nd)Pending Callbacks:and then its check other callbacks like I/O eg:(write/read file callback)
+          3)Poll phase: node js look for new IO events and execute it callback
+              Retrieve new I/O events excutes their callbacks 
+          4)check phase: execute setImadiate() callback
+          5)close Callbacks: Executes all close event callbacks
+worker Pool: worker pool is responsible for all heavy lifting (eg: large file transfer)
+             have different threads and 
+             we have work with file,worker pool takecare and workers done and trigger callback
+
+             event loop get terminate after ref==0
+
+
+EXPRESS JS:
+Why Express js?
+    writing all server side logic is pretty complex so express help to write easily 
+    express is all abt middleware
+    def: Express is nodejs framework - add bunch of utility functions and tools and clear set of rules on how app should be built(middleware)
+    its highly extensible and other packages can be plugged into it (middleware)
+middleware:
+  its a fucntion handle request and should call next() to forward the request to next function in line or send a response
+SendFile(): to send HTML Files
+    you're not limited to serving dummy text as a response
+    if request is directly made for a file (eg. .css file is requested)
+    you can enable static serving for such files via express.static()
+
+
+MongoDB:
+MongoDB stores data in flexible, JSON-like documents
+MongoDB is collection of documents
+The document model maps to the object in your application code, making data easy to work with  
+
+MongoDB is a distributed Database at its core, so high availability , horizontal scaling and geographic distribution are built in and easy to use
+MongoDB store data => in one document
+MongoDB is a tool that create a multiple multiple database
+MongoDB-> database #1
+          database #1
+
+NO SCHEMA:
+ 
+id:1, "name":"santhana", "course":"mongoDB"
+id:123, "name":"krishna", "course":"mongoDB",
+id:124534, "name":"santhana",  "age":20
+
+when data receives Database its put data into seprate instance
+Mocha: is used for testing purpose
+
+MongoDB umbrella:
+ Query API, Serverless function, DB Trigger, Real Time Sync.
+ https://www.mongodb.com/cloud/stitch
+
+ MongoDB :
+ CRUD 
+ Create,Read,Update,Delete/Remove Operation
+
+
+ start mododb 
+ "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
+
+ show dbs   => to show db
+ use students => use is to switch db into students
+db.studentData.insertOne()
+db.studentData.find().pretty();
+ BSON 
