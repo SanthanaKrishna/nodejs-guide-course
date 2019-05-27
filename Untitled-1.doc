@@ -83,6 +83,49 @@ SendFile(): to send HTML Files
  Handlerbars => <p> {{name}} </p>
 
  
+MVC:
+what is MVC? 
+  separation of concerns
+Models: are objects 
+      representing your data and contains data-related logic
+      managing your data (eg.saving and fetching data)
+Views:  
+    what the users sees
+    views responsible for rendering the right content in our html documents and sending back to users
+Controller: is Connecting Models and Views
+          should only make sure that the two can communicate (in both direction)
+
+
+
+
+DataBase:
+
+SQL vs NoSQL
+
+Horizonal scaling
+  add more serverss and merge Data into DataBase
+
+Vertical scaling
+Improver server capacity/ hardware
+
+SQL:
+data uses Schemas
+Relation DataBase
+Data is distributed across multiple tables
+Horizontal scaling is difficult/impossible,vertical scaling is possible
+Limitation for lots of thousand read & write quries per second
+SQL uses scrit data schemas and relations
+You can Connect your Node.js app via package like mysql2
+Writing SQL queries is not direclyt related to Node.js and something you have to learn in addition to Node.js
+
+
+NoSQL:
+Schema-less 
+Data is typically mearged/nested in a few collections
+Both horizontal and vertical scaling is posible
+great performance for mass read & write request
+
+
 MongoDB:
 MongoDB stores data in flexible, JSON-like documents
 MongoDB is collection of documents
@@ -93,6 +136,8 @@ MongoDB store data => in one document
 MongoDB is a tool that create a multiple multiple database
 MongoDB-> database #1
           database #1
+MongoDb  to build for large scale application,
+         monga to be as built quickly clear the data store,interact with data
 
 NO SCHEMA:
  
@@ -121,22 +166,9 @@ db.studentData.insertOne()
 db.studentData.find().pretty();
  BSON 
 
+ structure:  
+ DataBase: databaseName
+ collection : user order  are to collections
+ documents: {name,age }   {..}
 
-
-MVC:
-what is MVC? 
-  separation of concerns
-Models: are objects 
-      representing your data and contains data-related logic
-      managing your data (eg.saving and fetching data)
-Views:  
-    what the users sees
-    views responsible for rendering the right content in our html documents and sending back to users
-Controller: is Connecting Models and Views
-          should only make sure that the two can communicate (in both direction)
-
-DataBase:
-
-SQL:
-
-
+ Nested/Embedded documents and reference are two type of document 
