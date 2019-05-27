@@ -77,6 +77,12 @@ SendFile(): to send HTML Files
     you can enable static serving for such files via express.static()
 
 
+ AVAILABLE TEMPLATES
+ EJS =>   <p><%= name %> </p>
+ Pug(Jade)=> p #{name}
+ Handlerbars => <p> {{name}} </p>
+
+ 
 MongoDB:
 MongoDB stores data in flexible, JSON-like documents
 MongoDB is collection of documents
@@ -115,15 +121,22 @@ db.studentData.insertOne()
 db.studentData.find().pretty();
  BSON 
 
- Template Engines: Pug, Mustache, EJS
- Middleware function are function that have access request object(req) ,response object(res) and next() function in application request-response LifeCycle
- next function => invoked to executes the Middleware succeeding the current Middleware
- express.static function is responsile for serving static assests such as HTML files,images,etc   
- express.static(rootdir,publicfloder)
- 
- MODULE: Middleware and libraries:
- body-parse: parse incoming request body in a Middleware before your handler
- compression: node.js compression Middleware
- connect-timeout: Time out a request  in express application framework
- cookie-parser: parse cookie header and populate req.cookies with an objecrt
-CSRF Cross side request forgery
+
+
+MVC:
+what is MVC? 
+  separation of concerns
+Models: are objects 
+      representing your data and contains data-related logic
+      managing your data (eg.saving and fetching data)
+Views:  
+    what the users sees
+    views responsible for rendering the right content in our html documents and sending back to users
+Controller: is Connecting Models and Views
+          should only make sure that the two can communicate (in both direction)
+
+DataBase:
+
+SQL:
+
+
