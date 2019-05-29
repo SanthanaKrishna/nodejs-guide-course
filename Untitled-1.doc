@@ -2,6 +2,21 @@
   runtimeExecutable: "nodemon
   console: "integratedTerminal
 
+npm concurrently : allows to run backgend express server and frentend react devserver in same time in one single command 
+npm install --save express-validator
+npm i bcryptjs  for password encryption save plain text in database
+npm i config : for global variable
+npm i gravatar : if user signup  its shows user profile details automatically
+npm i jsonwebtoken : jwt pass token validation
+npm i request: Request to be simplest way possible to make http calls. It supports HTTPS 
+npm i bodyParser : for read request body data 
+instead of using bodyParser we use express.json()
+
+
+/401: not authorised
+
+
+
   node js Role:
   
   Run Server:
@@ -126,7 +141,12 @@ Both horizontal and vertical scaling is posible
 great performance for mass read & write request
 
 
-MongoDB:
+MongoDB: 
+https://github.com/bradtraversy/devconnector_2.0
+https://learncodeonline.in/mongodb/
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+mongodb+srv://krishna123:<password>@devmern-bfjzi.mongodb.net/test?retryWrites=true
+
 MongoDB stores data in flexible, JSON-like documents
 MongoDB is collection of documents
 The document model maps to the object in your application code, making data easy to work with  
@@ -160,11 +180,12 @@ MongoDB umbrella:
  start mododb 
  "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
 
- show dbs   => to show db
+ show dbs   => to show db in our system
  use students => use is to switch db into students
 db.studentData.insertOne()
 db.studentData.find().pretty();
- BSON 
+ Note: in MongoDB you directly don't store json we need to save in BSON 
+ MongoDB convert JSON date into BSON Data
 
  structure:  
  DataBase: databaseName
