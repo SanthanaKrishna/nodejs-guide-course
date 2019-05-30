@@ -13,6 +13,10 @@ npm i bodyParser : for read request body data
 instead of using bodyParser we use express.json()
 
 
+client side 
+npm install moment,
+npm install react-moment
+
 /401: not authorised
 
 
@@ -176,8 +180,41 @@ MongoDB umbrella:
  CRUD 
  Create,Read,Update,Delete/Remove Operation
 
+Three A of MongoDB
+A: Application
+A: Analytics 
+A: Admin
 
- start mododb 
+ Four operation CRUD 
+	Create:  
+		insertOne(data,options)
+		InsertMany(data,options)
+	Read:
+		find (filter,options)
+		findOne(filter,options)
+	Update:
+		updateOne(filter,data,options)
+updateMany(filter,data,options)
+replaceOne(filter,data,options)
+Delete:
+	deleteOne(filter,options)
+	deleteMany(filter,options)
+
+update() => its update the given data for unique ID and all properties in give ID get deleted except updated properties
+updateOne(filter,data,options) :  db.studentData.updateOne({email: "krishna123@gmail.com"}, {$set: {email:"sandy123@gmail.com"}})
+db.studentData.update.find({courseCount: {$gt:1}})   ===> gt means greater than 1
+Print entire database
+ db.studentData.find().forEach((student)=>{printjson(student)})
+db.studentData.find({},{email:1,_id:0,name:1})
+db.studentData.find({name:”Mark”}).lastlogin
+db.studentData.find({},{email:1,_id:0,name:1}).toArray()   ===> return array of object [{ } ]
+db.studentData.find().pretty() : while run this it show “it” to show all value
+this method does not show all the value, it doesn’t contain all value,  it just contains the information about that all the value, 
+What cursor is when try to dumb alll value from database, the actuall infomation doesn’t come directly until you say show ,the information comes only in meta file is called cursor, that meta file is cursor now 
+When you call find() method its shows only cursor object ( (i.e)meta file
+
+
+
  "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
 
  show dbs   => to show db in our system
@@ -193,3 +230,7 @@ db.studentData.find().pretty();
  documents: {name,age }   {..}
 
  Nested/Embedded documents and reference are two type of document 
+
+
+Relation Database:
+	RD is a way in which you’re one document is interact with another document
