@@ -114,6 +114,35 @@ Views:
 Controller: is Connecting Models and Views
           should only make sure that the two can communicate (in both direction)
 
+ API:
+ REST API:
+  rest api is stateless, client-independent API for exchanging data
+GRAPHQL API:
+  is stateless, client-independent API for exchanging data with higher query flexibility
+ REST API problem
+ solution 1:
+  Create a new REST API ENDPOINT(e.g GET/post-slim)
+problem: lots and lots of ENDPOINTS andlots of updating
+solution 2:
+  Use QUERY parameters(eg. GET/post?fata=slim)
+problem:
+API becomes hard to understand
+
+GRAPHQL: one Single Endpoint(typically/graphql)
+uses POST because Request Body defines Data Structure of retrieved Data
+Server-Side Resolver analyses Request Body, Fetches and Prepares and Returns Data
+: definition would be routes, resolver would be a your controller
+{
+  query{ //operation type  other types: mutation subscription for edit,delete,insert data
+    user{ //end points
+      name // requst field
+      age
+    }
+  }
+}
+  QUERY: Retrieve Data('GET')
+  Mutation: Manipulate Data("post","put","patch","delete")
+  Subscription: setup realtime connection via websockets
 
 
 
