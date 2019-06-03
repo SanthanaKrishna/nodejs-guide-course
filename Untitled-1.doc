@@ -179,7 +179,10 @@ MongoDB umbrella:
  MongoDB :
  CRUD 
  Create,Read,Update,Delete/Remove Operation
-
+Create: .post() => is to save
+READ:  .get()  => is to find
+UPDATE: .put()  => is to changr action
+DELETE: .delete() = >is to delete
 Three A of MongoDB
 A: Application
 A: Analytics 
@@ -234,3 +237,9 @@ db.studentData.find().pretty();
 
 Relation Database:
 	RD is a way in which you’re one document is interact with another document
+
+
+
+Graph QL:
+  graphQL that makes it easy to query fields and send data between the server and client
+two main in graphQL: queries and mutations queries
