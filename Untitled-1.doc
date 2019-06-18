@@ -128,7 +128,9 @@ solution 2:
 problem:
 API becomes hard to understand
 
-GRAPHQL: one Single Endpoint(typically/graphql)
+GRAPHQL: is typed query language and one Single Endpoint(typically/graphql)
+  graphQL that makes it easy to query fields and send data between the server and client
+two main in graphQL: queries and mutations queries
 uses POST because Request Body defines Data Structure of retrieved Data
 Server-Side Resolver analyses Request Body, Fetches and Prepares and Returns Data
 : definition would be routes, resolver would be a your controller
@@ -270,5 +272,3 @@ Relation Database:
 
 
 Graph QL:
-  graphQL that makes it easy to query fields and send data between the server and client
-two main in graphQL: queries and mutations queries
